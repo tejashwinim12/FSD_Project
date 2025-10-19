@@ -1,0 +1,74 @@
+/* Navbar container */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #000;
+  color: white;
+  padding: 1rem;
+  position: relative;
+  z-index: 1000;
+}
+
+/* Logo */
+.navbar-brand {
+  font-weight: bold;
+  color: #FFD700;
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+
+/* Links - Desktop */
+.navbar-links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.navbar-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.navbar-links a:hover {
+  color: #FFD700;
+}
+
+/* Hamburger button (hidden on desktop) */
+.menu-toggle {
+  display: none;
+  font-size: 1.5rem;
+  background: none;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+/* Mobile menu styles */
+@media (max-width: 639px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .navbar-links {
+    display: none;
+    flex-direction: column;
+    background: #111;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    padding: 1rem;
+    gap: 1rem;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+
+  .navbar-links.show {
+    display: flex;
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

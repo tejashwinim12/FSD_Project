@@ -1,0 +1,77 @@
+.profile-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+}
+
+.profile-card {
+  background: #1e1e1e;
+  color: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+  text-align: center;
+  width: 300px;
+}
+
+.profile-img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+}
+
+.profile-img.empty {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background-color: #ddd; /* light gray */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: 500;
+  color: #555;
+  margin: 0 auto 10px; /* center above text */
+}
+
+
+.email {
+  color: #aaa;
+  margin: 0.5rem 0;
+}
+
+.favorites {
+  margin: 1rem 0;
+  font-weight: bold;
+}
+
+.profile-actions button {
+  background: #007bff;
+  border: none;
+  padding: 0.6rem 1rem;
+  margin: 0.5rem;
+  border-radius: 8px;
+  cursor: pointer;
+  color: white;
+  transition: 0.3s;
+}
+
+.profile-actions button:hover {
+  background: #0056b3;
+}
+
+.delete-btn {
+  background: red;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.delete-btn:hover {
+  background: darkred;
+}

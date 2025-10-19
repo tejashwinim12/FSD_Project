@@ -1,0 +1,151 @@
+.home {
+  padding: 2rem 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Search Form */
+.search-form {
+  max-width: 600px;
+  margin: 0 auto 2rem;
+  display: flex;
+  flex-wrap: wrap; /* allows wrapping on small screens */
+  gap: 0.5rem;
+  padding: 0 1rem;
+  box-sizing: border-box;
+}
+
+.search-input {
+  flex: 1;
+  min-width: 150px; /* ensures input doesn't get too tiny */
+  padding: 0.75rem 1rem;
+  border: none;
+  border-radius: 4px;
+  background-color: #333;
+  color: white;
+  font-size: 1rem;
+}
+
+.search-input:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px #666;
+}
+
+.search-button {
+  padding: 0.75rem 1.5rem;
+  background-color: #e50914;
+  color: white;
+  border-radius: 4px;
+  font-weight: 500;
+  transition: background-color 0.2s;
+  white-space: nowrap;
+}
+
+.search-button:hover {
+  background-color: #f40612;
+}
+
+.search-form {
+  display: flex;
+  gap: 0.5rem;
+  max-width: 600px;
+  margin: 0 auto 2rem;
+}
+
+.input-wrapper {
+  position: relative;
+  flex: 1; /* fills remaining space */
+}
+
+.search-input {
+  width: 85%;
+  padding: 0.75rem 2.5rem 0.75rem 1rem; /* leave space for X */
+  border-radius: 4px;
+  border: none;
+  background-color: #333;
+  color: #fff;
+  font-size: 1rem;
+}
+
+.clear-btn {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  border: none;
+  background: transparent;
+  color: #ccc;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.clear-btn:hover {
+  color: #e50914;
+}
+
+.search-button {
+  flex: 0 0 auto; /* keeps its width */
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  border: none;
+  background-color: #e50914;
+  color: #fff;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.search-button:hover {
+  background-color: #f40612;
+}
+
+.recommended-section {
+  margin-top: 40px;
+}
+
+.recommended-section h2 {
+  margin-left: 10px; /* or 20px */
+  font-size: 1.5rem; /* optional to make it bigger */
+  margin-bottom: 15px;
+  color: #08d9b6;
+}
+
+.recommended-section .movies-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 15px;
+}
+
+
+/* Responsive Tweaks */
+@media (max-width: 639px) {
+  .home {
+    padding: 1rem 0;
+  }
+
+  .search-form {
+    flex-direction: column; /* stack input and button vertically */
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+  }
+
+  .search-button {
+    width: 100%; /* full width button for better UX */
+    text-align: center;
+  }
+}
+
+/* Movies Grid */
+.movies-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* smaller min for tiny screens */
+  gap: 1rem;
+  padding: 1rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+@media (min-width: 768px) {
+  .movies-grid {
+    gap: 1.5rem;
+  }
+}
